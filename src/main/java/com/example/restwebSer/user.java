@@ -23,9 +23,13 @@ public List<userDao> find()
 }
 public  userDao save(userDao userdao)
 { if(userdao.getId()==null)
-	userdao.setId(++count);
+	{
+	    userdao.setId(++count);
+	}
 else
-	list.add(userdao);
+	{
+	    list.add(userdao);
+	}
 	return userdao;
 }
 public userDao findone(int id)
